@@ -346,7 +346,6 @@ class ReTextTab(QSplitter):
 		stream = QTextStream(openfile)
 		encoding = encoding or globalSettings.defaultCodec
 		if encoding:
-			stream.setCodec(encoding)
 			# If encoding is specified or detected, we should save the file with
 			# the same encoding
 			self.editBox.document().setProperty("encoding", encoding)
@@ -381,12 +380,6 @@ class ReTextTab(QSplitter):
 		result = savefile.open(QFile.OpenModeFlag.WriteOnly)
 		if result:
 			savestream = QTextStream(savefile)
-
-			# Save the file with original encoding
-			encoding = self.editBox.document().property("encoding")
-			if encoding is not None:
-				savestream.setCodec(encoding)
-
 			savestream << text
 			savefile.close()
 		return result
