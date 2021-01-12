@@ -16,9 +16,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from PyQt5.QtCore import QDir, Qt
-from PyQt5.QtGui import QDesktopServices, QGuiApplication, QTextCursor, QTextDocument
-from PyQt5.QtWidgets import QTextBrowser
+from PyQt6.QtCore import QDir, Qt
+from PyQt6.QtGui import QDesktopServices, QGuiApplication, QTextCursor, QTextDocument
+from PyQt6.QtWidgets import QTextBrowser
 from ReText import globalSettings
 
 class ReTextPreview(QTextBrowser):

@@ -15,7 +15,7 @@ except ImportError:
 	# Windows compatibility: socket.socketpair backport for Python < 3.5
 	from backports.socketpair import socketpair
 
-from PyQt5.QtCore import pyqtSignal, QObject, QSocketNotifier
+from PyQt6.QtCore import pyqtSignal, QObject, QSocketNotifier
 
 def recvall(sock, remaining):
     alldata = bytearray()
